@@ -1,0 +1,10 @@
+name: Pure Test
+on:
+  schedule:
+    - cron: '*/5 * * * *' # 5分钟执行一次
+  workflow_dispatch:
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "这是一次纯净的测试，没有任何下载、没有代理、没有动态脚本"
